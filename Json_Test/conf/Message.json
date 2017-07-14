@@ -1,0 +1,36 @@
+{
+  "Warnings": [
+    {
+      "Id": 1,
+      "LedId": 2,
+      "Name": "Tire1",
+      "X": 300,
+      "Y": 400,
+      "Width": 400,
+      "Height": 500,
+      "Color": "#FFFFFF",
+      "Image": "/home/elang/music/Tire.png",
+      "Cancel": 2,
+      "Priority": 1,
+      "Blink": 1,
+      "Frequency": 3,
+      "Message": "Tire pressure is not enough!"
+    },
+    {
+      "Id": 2,
+      "LedId": 2,
+      "Name": "Tire2",
+      "X": 300,
+      "Y": 400,
+      "Width": 400,
+      "Height": 500,
+      "Color": "#FFFFFF",
+      "Image": "/home/elang/music/Tire.png",
+      "Cancel": 2,
+      "Priority": 1,
+      "Blink": 1,
+      "Frequency": 3,
+      "Message": "Tire pressure is not enough!"
+    }
+  ]
+}

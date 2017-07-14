@@ -1,0 +1,58 @@
+{
+	"Leds":[
+		{
+			"Id":1,
+			"WarningId":1,
+			"Name": "TurnLeft",
+			"Cl15State":true,
+  			"X": 300,
+		  	"Y": 400,
+		  	"Width":400,
+		  	"Height":500,
+		  	"Color":"#FFFFFF",
+		  	"Icon":"/home/elang/music/turnleft.png",
+		  	"Priority": 1,
+		  	"Blink": 1,
+		  	"State":false,
+		  	"Frequency": 3,
+		  	"Message": "Turn left!",
+		  	"Music": "/home/elang/music/turnleft.mp3"
+		},
+		{
+			"Id":1,
+			"WarningId":1,
+			"Name": "TurnRight",
+			"Cl15State":true,
+  			"X": 300,
+		  	"Y": 400,
+		  	"Width":400,
+		  	"Height":500,
+		  	"Color":"#FFFFFF",
+		  	"Icon":"/home/elang/music/turnright.png",
+		  	"Priority": 1,
+		  	"Blink": 1,
+		  	"State":false,
+		  	"Frequency": 3,
+		  	"Message": "Turn right!",
+		  	"Music": "/home/elang/music/turnright.mp3"
+		},
+		{
+			"Id":3,
+			"WarningId":1,
+			"Name": "Back",
+			"Cl15State":true,
+  			"X": 300,
+		  	"Y": 400,
+		  	"Width":400,
+		  	"Height":500,
+		  	"Color":"#FFFFFF",
+		  	"Icon":"/home/elang/music/back.png",
+		  	"Priority": 1,
+		  	"Blink": 1,
+		  	"State":false,
+		  	"Frequency": 3,
+		  	"Message": "Back a car!",
+		  	"Music": "/home/elang/music/back.mp3"
+		}
+	]
+}

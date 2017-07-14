@@ -1,0 +1,16 @@
+{
+    "Id":"",            
+    "Name": "ABS",      //名称
+    "X":300,            //横坐标
+    "Y":400,            //纵坐标
+    "Width":400,        //宽度
+    "Height":500,       //高度
+    "Color":"#FFFFFF",  //图标颜色
+    "Priority":1,       //优先级
+    "Blink":1,          //1:闪烁 0:持续
+    "Frequency":3,      //闪烁周期，单位毫秒 
+    "State":true,       //true代表激活，false代表不激活
+    "Resolution":,      //分辨率
+    "Message": "",      //提示信息
+    "Music": "",        //音乐路径
+}
