@@ -26,8 +26,9 @@ protected:
     ~Led_Manager();
 private:
     void Init();
-    bool Read_Led_Info();                         //读取ledjson配置文件
-	void OnSignal();
+    bool Read_Led_Info();										//读取ledjson配置文件
+	void OnAction(Led_Action_Type m_Type);			//根据信号的不同，执行不同的操作
+
 		
 };
 

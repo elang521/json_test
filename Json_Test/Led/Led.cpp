@@ -3,7 +3,7 @@
 Led::Led()
 {
 	this->id=0;
-	this->warningId=0;
+	this->warning_id = 0;
 	this->name="";	
 	this->common=false; 
 	this->x=0;
@@ -20,3 +20,4 @@ Led::Led()
 Led::~Led()
 {
 }
+

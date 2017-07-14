@@ -15,33 +15,10 @@ WarningManager *WarningManager::GetInstance()
     return m_Manager;
 }
 
-bool WarningManager::IsExist(QString name)
-{
-    if(this->m_WarningMap.contains(name))
-    {
-        return true;
-    }
-    else
-        return false;
-}
-
-bool WarningManager::GetWarningByName(QString name, Warning &m_Warning)
-{
-    if(this->IsExist(name))
-    {
-        Warning tmp=this->m_WarningMap[name];
-        m_Warning=tmp;
-        return true;
-    }
-    else
-        return false;
-}
 
 WarningManager::WarningManager()
 {
-
     this->Init();
-    this->ReadLedJson();
 }
 
 WarningManager::~WarningManager()
@@ -51,60 +28,68 @@ WarningManager::~WarningManager()
 
 void WarningManager::Init()
 {
-    this->m_WarningMap.clear();
+	if (this->Read_Warning_Info())
+	{
+
+	}
+	
 }
 
-bool WarningManager::ReadLedJson()
+bool WarningManager::Read_Warning_Info()
 {
-    QFile file("E:/workspace/json/json/Warning.json");
-    if (!file.open(QIODevice::ReadOnly | QIODevice::Text))
-        return false;
-
-    QTextStream in(&file);
-    QString json = in.readAll();
-
-    QJsonParseError error;
-    QJsonDocument jsonDocument = QJsonDocument::fromJson(json.toUtf8(), &error);
-    if (error.error == QJsonParseError::NoError) {
-        if (jsonDocument.isObject())  {
-            QVariantMap result=jsonDocument.toVariant().toMap();
-            foreach (QVariant plugin, result["Warnings"].toList()) {
-                QVariantMap ledMap= plugin.toMap();
-                this->AddToMap(ledMap);
-            }
-            return true;
-        }
-        return false;
-    }
-    else {
-        qDebug()<<"Read Led.json or parse json Faild!Please sure your json right!";
-        return false;
-    }
-    return true;
+	std::ifstream ifs;
+	ifs.open("conf/warning.json");
+	assert(ifs.is_open());
+	Json::Reader reader;
+	Json::Value root;
+	if (!reader.parse(ifs, root, true))
+	{
+		return false;
+	}
+	//int width = root["width"].asInt();
+	//int height = root["width"].asInt();
+	const Json::Value leds = root["leds"];
+	unsigned int count = leds.size();
+	if (count == 0)
+	{
+		return false;
+	}
+	for (unsigned int i = 0; i <count; ++i)
+	{
+		Warning m_info;
+		m_info.id = leds[i]["id"].asInt();
+		m_info.led_id = leds[i]["led_id"].asInt();
+		m_info.name = leds[i]["name"].asString();
+		m_info.priority = leds[i]["priority"].asInt();
+		m_info.blink = leds[i]["blink"].asBool();
+		m_info.cycle = leds[i]["cycle"].asInt();
+		m_info.message = leds[i]["message"].asString();
+		m_info.icon = leds[i]["icon"].asString();
+		m_info.sound = leds[i]["sound"].asString();
+		this->m_Warnings.push_back(m_info);
+	}
+	return true;
 }
 
-bool WarningManager::AddToMap(const QVariantMap &ledMap)
+void WarningManager::OnAction(Led_Action_Type m_Type)
 {
-    Warning mInfo;
-    mInfo.SetId(ledMap["Id"].toInt());
-    mInfo.SetLedId(ledMap["LedId"].toInt());
-    mInfo.SetName(ledMap["Name"].toString());
-    mInfo.SetX(ledMap["X"].toInt());
-    mInfo.SetY(ledMap["Y"].toInt());
-    mInfo.SetWidth(ledMap["Width"].toInt());
-    mInfo.SetHeight(ledMap["Height"].toInt());
-    mInfo.SetColor(ledMap["Color"].toInt());
-    mInfo.SetImage(ledMap["Image"].toString());
-    mInfo.SetSound(ledMap["Sound"].toString());
-    mInfo.SetMovie(ledMap["Movie"].toString());
-    mInfo.SetCancel(ledMap["Cancel"].toInt());
-    mInfo.SetResourceX(ledMap["ResourceX"].toInt());
-    mInfo.SetResourceY(ledMap["ResourceY"].toInt());
-    mInfo.SetPriority(ledMap["Priority"].toInt());
-    mInfo.SetBlink(ledMap["Blink"].toInt());
-    mInfo.SetFrequency(ledMap["Frequency"].toInt());
-    mInfo.SetMessage(ledMap["Message"].toString());
-    this->m_WarningMap.insert(mInfo.GetName(),mInfo);
-    return true;
+	//判断来的是什么信号
+	switch (m_Type)
+	{
+		//case:on
+		//判断是否已经在打开队列
+		//判断前置条件，是否应该打开
+		//发送打开组包，并将其加入已经打开队列
+
+		//case:off
+		//判断是否在打开队列，不在直接忽略
+		//发送关闭组包，并将其移出打开队列
+
+		//case:can on
+		//case:can off
+
+		//case:cl15on
+		//case：cl15off
+	}
 }
 

@@ -81,6 +81,8 @@
     <ClCompile Include="Led\Led.cpp" />
     <ClCompile Include="Led\Led_Manager.cpp" />
     <ClCompile Include="main.cpp" />
+    <ClCompile Include="Warning\Warning.cpp" />
+    <ClCompile Include="Warning\WarningManager.cpp" />
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="include\json_define.h" />
@@ -97,6 +99,8 @@
     <ClInclude Include="json\writer.h" />
     <ClInclude Include="Led\Led.h" />
     <ClInclude Include="Led\Led_Manager.h" />
+    <ClInclude Include="Warning\Warning.h" />
+    <ClInclude Include="Warning\WarningManager.h" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">

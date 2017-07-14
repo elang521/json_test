@@ -18,6 +18,9 @@
     <Filter Include="include">
       <UniqueIdentifier>{7de04077-71c6-4d7b-af69-fe00018bff61}</UniqueIdentifier>
     </Filter>
+    <Filter Include="warning">
+      <UniqueIdentifier>{39cbc9d4-daa0-4599-8658-979aeece5cea}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="main.cpp">
@@ -28,6 +31,12 @@
     </ClCompile>
     <ClCompile Include="Led\Led_Manager.cpp">
       <Filter>Led</Filter>
+    </ClCompile>
+    <ClCompile Include="Warning\Warning.cpp">
+      <Filter>warning</Filter>
+    </ClCompile>
+    <ClCompile Include="Warning\WarningManager.cpp">
+      <Filter>warning</Filter>
     </ClCompile>
   </ItemGroup>
   <ItemGroup>
@@ -72,6 +81,12 @@
     </ClInclude>
     <ClInclude Include="include\json_define.h">
       <Filter>include</Filter>
+    </ClInclude>
+    <ClInclude Include="Warning\Warning.h">
+      <Filter>warning</Filter>
+    </ClInclude>
+    <ClInclude Include="Warning\WarningManager.h">
+      <Filter>warning</Filter>
     </ClInclude>
   </ItemGroup>
 </Project>

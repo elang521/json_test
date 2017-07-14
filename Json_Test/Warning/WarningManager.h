@@ -1,33 +1,25 @@
 #ifndef WARNINGMANAGER_H
 #define WARNINGMANAGER_H
-#include <stdio.h>
-#include <QString>
-#include <QJsonDocument>
-#include <QDebug>
-#include <QFile>
-#include <QMap>
+#include <iostream>
+#include <fstream>
+#include <cassert>
 #include "Warning.h"
+#include "../json/json.h"
 
 class WarningManager
 {
 public:
     static WarningManager *m_Manager;
-public:
 
-    bool IsExist(QString name);                                 //检查配置文件是否定义该LED灯
-    bool GetWarningByName(QString name,Warning &m_Warning);     //获取某Led灯配置
-    bool OnWarning(int m_WarningId);                            //告警触发
 private:
-    QVariantMap m_LedMap;                                       //配置文件map
-    QMap<QString,Warning> m_WarningMap;                         //存放json定义的warning
+	std::vector<Warning> m_Warnings;
 protected:
     WarningManager();
     ~WarningManager();
 private:
-    void Init();
-    bool ReadLedJson();                                         //读取ledjson配置文件
-    bool AddToMap(const QVariantMap &ledMap);                   //将json信息存入内存
-
+	void Init();
+	bool Read_Warning_Info();									//读取warningjson配置文件
+	void OnAction(Led_Action_Type m_Type);				//根据信号的不同，执行不同的操作
 public:
     static  WarningManager * GetInstance();
 };
