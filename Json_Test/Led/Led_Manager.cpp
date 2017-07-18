@@ -62,7 +62,8 @@ bool Led_Manager::Read_Led_Info()
 		m_info.priority = leds[i]["priority"].asInt();
 		m_info.blink = leds[i]["blink"].asBool();
 		m_info.cycle = leds[i]["cycle"].asInt();
-		m_info.message = leds[i]["message"].asString();
+        m_info.text_cn = leds[i]["text_cn"].asString();
+        m_info.text_en = leds[i]["text_en"].asString();
 		m_info.icon = leds[i]["icon"].asString();
 		m_info.sound = leds[i]["sound"].asString();
 		m_leds.push_back(m_info);

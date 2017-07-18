@@ -19,6 +19,34 @@
 			"sound": "/home/elang/music/tire.mp3",
 			"movie": "/home/elang/music/tire.gif",
 			"message": "tire pressure is not enough!"
+		},
+		{
+			"id": 2,
+			"led_id": 2,
+			"name": "tire1",
+			"precondition": 0,
+			"priority": 1,
+			"cancel": 1,
+			"blink": 1,
+			"cycle": 3,
+			"image": "/home/elang/music/tire2.png",
+			"sound": "/home/elang/music/tire2.mp3",
+			"movie": "/home/elang/music/tire2.gif",
+			"message": "tire pressure is not enough!"
+		},
+		{
+			"id": 3,
+			"led_id": 2,
+			"name": "tire1",
+			"precondition": 0,
+			"priority": 1,
+			"cancel": 1,
+			"blink": 1,
+			"cycle": 3,
+			"image": "/home/elang/music/tire3.png",
+			"sound": "/home/elang/music/tire3.mp3",
+			"movie": "/home/elang/music/tire3.gif",
+			"message": "tire pressure is not enough!"
 		}
 	]
 }

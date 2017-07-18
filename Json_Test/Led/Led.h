@@ -18,7 +18,8 @@ public:
 	int priority;               //优先级
 	bool blink;               //true:闪烁；flase:持续
 	int cycle;					//闪烁周期	
-	std::string message;  //显示消息
+    std::string text_cn;  //中文消息
+    std::string text_en;  //英文消息
 	std::string sound;      //声音文件路径
 	std::string	icon;	        //图标路径
 

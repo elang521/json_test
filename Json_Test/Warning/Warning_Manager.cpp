@@ -1,32 +1,32 @@
-#include "WarningManager.h"
+#include "Warning_Manager.h"
 #include <mutex>
 
-WarningManager* WarningManager::m_Manager = NULL;\
+Warning_Manager* Warning_Manager::m_Manager = NULL;\
 
-WarningManager *WarningManager::GetInstance()
+Warning_Manager *Warning_Manager::GetInstance()
 {
     std::mutex mutex;
     if (m_Manager == NULL)
     {
         mutex.lock();
-        m_Manager = new WarningManager();
+        m_Manager = new Warning_Manager();
         mutex.unlock();
     }
     return m_Manager;
 }
 
 
-WarningManager::WarningManager()
+Warning_Manager::Warning_Manager()	
 {
     this->Init();
 }
 
-WarningManager::~WarningManager()
+Warning_Manager::~Warning_Manager()
 {
 
 }
 
-void WarningManager::Init()
+void Warning_Manager::Init()
 {
 	if (this->Read_Warning_Info())
 	{
@@ -35,7 +35,7 @@ void WarningManager::Init()
 	
 }
 
-bool WarningManager::Read_Warning_Info()
+bool Warning_Manager::Read_Warning_Info()
 {
 	std::ifstream ifs;
 	ifs.open("conf/warning.json");
@@ -48,7 +48,7 @@ bool WarningManager::Read_Warning_Info()
 	}
 	//int width = root["width"].asInt();
 	//int height = root["width"].asInt();
-	const Json::Value leds = root["leds"];
+	const Json::Value leds = root["warnings"];
 	unsigned int count = leds.size();
 	if (count == 0)
 	{
@@ -63,7 +63,8 @@ bool WarningManager::Read_Warning_Info()
 		m_info.priority = leds[i]["priority"].asInt();
 		m_info.blink = leds[i]["blink"].asBool();
 		m_info.cycle = leds[i]["cycle"].asInt();
-		m_info.message = leds[i]["message"].asString();
+        m_info.text_cn = leds[i]["text_cn"].asString();
+        m_info.text_en = leds[i]["text_en"].asString();
 		m_info.icon = leds[i]["icon"].asString();
 		m_info.sound = leds[i]["sound"].asString();
 		this->m_Warnings.push_back(m_info);
@@ -71,7 +72,7 @@ bool WarningManager::Read_Warning_Info()
 	return true;
 }
 
-void WarningManager::OnAction(Led_Action_Type m_Type)
+void Warning_Manager::OnAction(Warning_Action_Type m_Type)
 {
 	//判断来的是什么信号
 	switch (m_Type)
@@ -89,7 +90,7 @@ void WarningManager::OnAction(Led_Action_Type m_Type)
 		//case:can off
 
 		//case:cl15on
-		//case：cl15off
+		//case:cl15off
 	}
 }
 

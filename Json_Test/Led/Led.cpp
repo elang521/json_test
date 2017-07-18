@@ -12,7 +12,8 @@ Led::Led()
 	this->priority=0;
 	this->blink=false;
 	this->cycle=0;
-	this->message="";
+    this->text_cn = "";
+    this->text_en= "";
 	this->sound="";
 	this->icon="";
 }

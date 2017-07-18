@@ -12,14 +12,17 @@
     <Filter Include="json">
       <UniqueIdentifier>{1eb92d79-7f9c-411d-9b68-8cb5908522bd}</UniqueIdentifier>
     </Filter>
-    <Filter Include="Led">
-      <UniqueIdentifier>{df11f7d3-ed5a-4e68-966c-e2f97cd2554d}</UniqueIdentifier>
-    </Filter>
     <Filter Include="include">
       <UniqueIdentifier>{7de04077-71c6-4d7b-af69-fe00018bff61}</UniqueIdentifier>
     </Filter>
     <Filter Include="warning">
       <UniqueIdentifier>{39cbc9d4-daa0-4599-8658-979aeece5cea}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="message">
+      <UniqueIdentifier>{fcb2601f-f5b3-46f8-8e40-d76829639c79}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="led">
+      <UniqueIdentifier>{df11f7d3-ed5a-4e68-966c-e2f97cd2554d}</UniqueIdentifier>
     </Filter>
   </ItemGroup>
   <ItemGroup>
@@ -27,15 +30,21 @@
       <Filter>源文件</Filter>
     </ClCompile>
     <ClCompile Include="Led\Led.cpp">
-      <Filter>Led</Filter>
+      <Filter>led</Filter>
     </ClCompile>
     <ClCompile Include="Led\Led_Manager.cpp">
-      <Filter>Led</Filter>
+      <Filter>led</Filter>
     </ClCompile>
     <ClCompile Include="Warning\Warning.cpp">
       <Filter>warning</Filter>
     </ClCompile>
-    <ClCompile Include="Warning\WarningManager.cpp">
+    <ClCompile Include="Message\Message.cpp">
+      <Filter>message</Filter>
+    </ClCompile>
+    <ClCompile Include="Message\Message_Manager.cpp">
+      <Filter>message</Filter>
+    </ClCompile>
+    <ClCompile Include="Warning\Warning_Manager.cpp">
       <Filter>warning</Filter>
     </ClCompile>
   </ItemGroup>
@@ -74,10 +83,10 @@
       <Filter>json</Filter>
     </ClInclude>
     <ClInclude Include="Led\Led.h">
-      <Filter>Led</Filter>
+      <Filter>led</Filter>
     </ClInclude>
     <ClInclude Include="Led\Led_Manager.h">
-      <Filter>Led</Filter>
+      <Filter>led</Filter>
     </ClInclude>
     <ClInclude Include="include\json_define.h">
       <Filter>include</Filter>
@@ -85,7 +94,13 @@
     <ClInclude Include="Warning\Warning.h">
       <Filter>warning</Filter>
     </ClInclude>
-    <ClInclude Include="Warning\WarningManager.h">
+    <ClInclude Include="Message\Message.h">
+      <Filter>message</Filter>
+    </ClInclude>
+    <ClInclude Include="Message\Message_Manager.h">
+      <Filter>message</Filter>
+    </ClInclude>
+    <ClInclude Include="Warning\Warning_Manager.h">
       <Filter>warning</Filter>
     </ClInclude>
   </ItemGroup>

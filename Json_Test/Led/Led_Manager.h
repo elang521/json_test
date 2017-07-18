@@ -9,7 +9,6 @@
 #include<list>
 #include<vector>
 #include "../json/json.h"
-//#include "../include/json_define.h"
 
 class Led_Manager
 {
