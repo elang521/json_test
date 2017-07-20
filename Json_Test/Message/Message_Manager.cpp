@@ -70,23 +70,24 @@ bool Message_Manager::Read_Message_Info()
 
 void Message_Manager::OnAction(Message_Action_Type m_Type)
 {
-    //�ж�������ʲô�ź�
+    //判断来的是什么信号
     switch (m_Type)
     {
         //case:on
-        //�ж��Ƿ��Ѿ��ڴ򿪶���
-        //�ж�ǰ���������Ƿ�Ӧ�ô�
-        //���ʹ����������������Ѿ��򿪶���
+        //判断是否已经在打开队列
+        //判断前置条件，是否应该打开
+        //发送打开组包，并将其加入已经打开队列
 
         //case:off
-        //�ж��Ƿ��ڴ򿪶��У�����ֱ�Ӻ���
-        //���͹ر�������������Ƴ��򿪶���
+        //判断是否在打开队列，不在直接忽略
+        //发送关闭组包，并将其移出打开队列
 
         //case:can on
         //case:can off
 
         //case:cl15on
         //case:cl15off
+    }
     }
 }
 
