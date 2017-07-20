@@ -88,6 +88,5 @@ void Message_Manager::OnAction(Message_Action_Type m_Type)
         //case:cl15on
         //case:cl15off
     }
-    }
 }
 
