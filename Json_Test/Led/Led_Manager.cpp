@@ -82,7 +82,7 @@ void Led_Manager::OnAction(Led_Action_Type m_Type)
 		//发送打开组包，并将其加入已经打开队列
 
 		//case:off
-		//判断是否在打开队列，不在直接忽略
+		//判断是否在打开队列，不在直接忽略？
 		//发送关闭组包，并将其移出打开队列
 
 		//case:can on

@@ -1,4 +1,4 @@
-#include "Warning_Manager.h"
+﻿#include "Warning_Manager.h"
 #include <mutex>
 
 Warning_Manager* Warning_Manager::m_Manager = NULL;\
@@ -74,23 +74,23 @@ bool Warning_Manager::Read_Warning_Info()
 
 void Warning_Manager::OnAction(Warning_Action_Type m_Type)
 {
-	//判断来的是什么信号
-	switch (m_Type)
-	{
-		//case:on
-		//判断是否已经在打开队列
-		//判断前置条件，是否应该打开
-		//发送打开组包，并将其加入已经打开队列
+    //判断来的是什么信号?
+    switch (m_Type)
+    {
+        //case:on
+        //判断是否已经在打开队列
+        //判断前置条件，是否应该打开
+        //发送打开组包，并将其加入已经打开队列
 
-		//case:off
-		//判断是否在打开队列，不在直接忽略
-		//发送关闭组包，并将其移出打开队列
+        //case:off
+        //判断是否在打开队列，不在直接忽略？
+        //发送关闭组包，并将其移出打开队列
 
-		//case:can on
-		//case:can off
+        //case:can on
+        //case:can off
 
-		//case:cl15on
-		//case:cl15off
-	}
+        //case:cl15on
+        //case:cl15off
+    }
 }
 
