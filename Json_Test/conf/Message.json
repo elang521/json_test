@@ -1,12 +1,12 @@
 {
-  "X": 300,
-  "Y": 400,
-  "Width": 400,
-  "Height": 500,
-  "Messages": [
+  "x": 300,
+  "y": 400,
+  "width": 400,
+  "height": 500,
+  "messages": [
     {
       "id": 1,
-      "led_Id": 1,
+      "led_id": 1,
       "name": "Tire",
       "cancel": 2,
       "priority": 1,
