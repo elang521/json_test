@@ -61,7 +61,7 @@ bool Message_Manager::Read_Message_Info()
         m_info.priority = leds[i]["priority"].asInt();
         m_info.text_cn = leds[i]["text_cn"].asString();
         m_info.text_en = leds[i]["text_en"].asString();
-        m_info.image = leds[i]["image"].asString();
+        m_info.icon = leds[i]["icon"].asString();
         m_info.sound = leds[i]["sound"].asString();
         m_Messages.push_back(m_info);
     }
@@ -70,17 +70,17 @@ bool Message_Manager::Read_Message_Info()
 
 void Message_Manager::OnAction(Message_Action_Type m_Type)
 {
-    //ÅÐ¶ÏÀ´µÄÊÇÊ²Ã´ÐÅºÅ
+    //ï¿½Ð¶ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ê²Ã´ï¿½Åºï¿½
     switch (m_Type)
     {
         //case:on
-        //ÅÐ¶ÏÊÇ·ñÒÑ¾­ÔÚ´ò¿ª¶ÓÁÐ
-        //ÅÐ¶ÏÇ°ÖÃÌõ¼þ£¬ÊÇ·ñÓ¦¸Ã´ò¿ª
-        //·¢ËÍ´ò¿ª×é°ü£¬²¢½«Æä¼ÓÈëÒÑ¾­´ò¿ª¶ÓÁÐ
+        //ï¿½Ð¶ï¿½ï¿½Ç·ï¿½ï¿½Ñ¾ï¿½ï¿½Ú´ò¿ª¶ï¿½ï¿½ï¿½
+        //ï¿½Ð¶ï¿½Ç°ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ç·ï¿½Ó¦ï¿½Ã´ï¿½
+        //ï¿½ï¿½ï¿½Í´ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ñ¾ï¿½ï¿½ò¿ª¶ï¿½ï¿½ï¿½
 
         //case:off
-        //ÅÐ¶ÏÊÇ·ñÔÚ´ò¿ª¶ÓÁÐ£¬²»ÔÚÖ±½ÓºöÂÔ
-        //·¢ËÍ¹Ø±Õ×é°ü£¬²¢½«ÆäÒÆ³ö´ò¿ª¶ÓÁÐ
+        //ï¿½Ð¶ï¿½ï¿½Ç·ï¿½ï¿½Ú´ò¿ª¶ï¿½ï¿½Ð£ï¿½ï¿½ï¿½ï¿½ï¿½Ö±ï¿½Óºï¿½ï¿½ï¿½
+        //ï¿½ï¿½ï¿½Í¹Ø±ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Æ³ï¿½ï¿½ò¿ª¶ï¿½ï¿½ï¿½
 
         //case:can on
         //case:can off

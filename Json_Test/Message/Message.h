@@ -16,7 +16,7 @@ public:
     //int cycle;						//闪烁周期
     std::string text_cn;				//中文消息
     std::string text_en;			//英文消息
-    std::string image;				//图标路径
+    std::string icon;				//图标路径
     std::string sound;				//声音路径
 public:
     Message();

@@ -5,7 +5,7 @@ Message::Message()
     this->id=0;
     this->led_Id=0;          //告警led的id
     this->name="";          //名称
-    this->image="";         //图标路径
+    this->icon="";         //图标路径
     this->cancel=0;         //取消方式
     this->priority=0;		 //优先级
 	this->sound = "";

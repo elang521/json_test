@@ -15,8 +15,8 @@
             "cycle": 0,
             "text_cn": "",
             "text_en": "",
-            "icon": "/home/elang/music/turnleft.png",
-            "sound": "/home/elang/music/turnleft.mp3"
+            "icon": "",
+            "sound": ""
         },
         {
             "id": 2,
@@ -830,7 +830,7 @@
             "blink": 0,
             "cycle": 0,
             "text_cn": "充电中断",
-            "text_en": "Charging is stopped",
+            "text_en": "Charging is stoppe  d",
             "icon": "",
             "sound": ""
         }
