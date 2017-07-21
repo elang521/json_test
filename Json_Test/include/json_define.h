@@ -1,32 +1,32 @@
-//LEDµÆ´ò¿ªµÄÇ°ÖÃÌõ¼ş
+ï»¿//LEDç¯æ‰“å¼€çš„å‰ç½®æ¡ä»¶
 enum Precondition
 {
 	can,
 	cl15
 };
 
-//LedµÆĞÅºÅÖÖÀà
+//Ledç¯ä¿¡å·ç§ç±»
 enum Led_Action_Type
 {
 	type1,
 	type2
 };
 
-//WarningµÆĞÅºÅÖÖÀà
+//Warningç¯ä¿¡å·ç§ç±»
 enum Warning_Action_Type
 {
 	warning_type1,
 	warning_type2
 };
 
-//MessageµÆĞÅºÅÖÖÀà
+//Messageç¯ä¿¡å·ç§ç±»
 enum Message_Action_Type
 {
 	message_type1,
 	message_type2
 };
 
-//¸æ¾¯È¡Ïû·½Ê½
+//å‘Šè­¦å–æ¶ˆæ–¹å¼
 enum Cancel_Type
 {
 	general

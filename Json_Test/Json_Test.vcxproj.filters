@@ -103,5 +103,9 @@
     <ClInclude Include="Warning\Warning_Manager.h">
       <Filter>warning</Filter>
     </ClInclude>
+    <ClInclude Include="aa.h" />
+    <ClInclude Include="include\abc.h">
+      <Filter>include</Filter>
+    </ClInclude>
   </ItemGroup>
 </Project>

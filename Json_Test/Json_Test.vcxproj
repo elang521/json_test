@@ -87,6 +87,8 @@
     <ClCompile Include="Warning\Warning_Manager.cpp" />
   </ItemGroup>
   <ItemGroup>
+    <ClInclude Include="aa.h" />
+    <ClInclude Include="include\abc.h" />
     <ClInclude Include="include\json_define.h" />
     <ClInclude Include="json\allocator.h" />
     <ClInclude Include="json\assertions.h" />
