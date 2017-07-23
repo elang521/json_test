@@ -7,3 +7,7 @@
 /Json_Test/.gitattributes
 /Json_Test/.gitignore
 
+.vs/Json_Test/v14/.suo
+Json_Test.VC.db
+Json_Test/json.lib
+*.opendb

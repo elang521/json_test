@@ -19,7 +19,7 @@ public:
 
 private:
 	std::vector<Led> m_leds;					//存在的led等信息列表
-	std::list<Led> m_open_leds;				//存放已经打开的led灯
+	std::list<Led> m_open_leds;				    //存放已经打开的led灯
 protected:
     Led_Manager();
     ~Led_Manager();
