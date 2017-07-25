@@ -54,12 +54,13 @@ bool Led_Manager::Read_Led_Info()
 		Led m_info;
 		m_info.id = leds[i]["id"].asInt();
 		m_info.warning_id = leds[i]["warning_id"].asInt();
+		m_info.message_id = leds[i]["message_id"].asInt();
 		m_info.name = leds[i]["name"].asString();
 		m_info.precondition = (Precondition)leds[i]["precondition"].asInt();
 		m_info.common = leds[i]["common"].asBool();
 		m_info.x = leds[i]["x"].asInt();
 		m_info.y = leds[i]["y"].asInt();
-		m_info.priority = leds[i]["priority"].asInt();
+		m_info.priority = (Led_Priority)leds[i]["priority"].asInt();
 		m_info.blink = leds[i]["blink"].asBool();
 		m_info.cycle = leds[i]["cycle"].asInt();
         m_info.text_cn = leds[i]["text_cn"].asString();
@@ -71,7 +72,7 @@ bool Led_Manager::Read_Led_Info()
 	return false;
 }
 
-void Led_Manager::OnAction(Led_Action_Type m_Type)
+void Led_Manager::OnAction(int m_Id,Led_Action_Type m_Type)
 {
 	//判断来的是什么信号
 	switch (m_Type)

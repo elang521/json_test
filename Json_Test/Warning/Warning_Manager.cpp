@@ -60,7 +60,7 @@ bool Warning_Manager::Read_Warning_Info()
 		m_info.id = leds[i]["id"].asInt();
 		m_info.led_id = leds[i]["led_id"].asInt();
 		m_info.name = leds[i]["name"].asString();
-		m_info.priority = leds[i]["priority"].asInt();
+		m_info.priority = (Warning_Priority)leds[i]["priority"].asInt();
 		m_info.blink = leds[i]["blink"].asBool();
 		m_info.cycle = leds[i]["cycle"].asInt();
         m_info.text_cn = leds[i]["text_cn"].asString();
@@ -72,7 +72,7 @@ bool Warning_Manager::Read_Warning_Info()
 	return true;
 }
 
-void Warning_Manager::OnAction(Warning_Action_Type m_Type)
+void Warning_Manager::OnAction(int m_Id,Warning_Action_Type m_Type)
 {
     //判断来的是什么信号?
     switch (m_Type)

@@ -6,11 +6,28 @@
 	"resourceX": 50,
 	"resourceY": 50,
 	"warnings": [
+		// {
+		// 	"id": 20,						//告警id
+		// 	"led_id": 0,					//告警对应led灯id
+		// 	"name": "Oil pressure low",		//告警名称
+		// 	"precondition": 0,				//告警前置条件（详见include/json_define.h）
+		// 	"pop_up":0,						//是否突出显示,true:是；flase:不突出显示
+		// 	"priority": 0,					//优先级（详见include/json_define.h）
+		// 	"cancel": 0,					//取消告警的方式
+		// 	"blink": 0,						//是否闪烁，true:闪烁;false:不闪烁
+		// 	"cycle": 0,						//闪烁周期
+		// 	"text_cn": "机油压力过低",	   //中文文本
+		// 	"text_en": "Oil pressure low",	//英文文本
+		// 	"image": "",					//告警显示的图片（仪表中央消息告警区域，""代表没有图片）
+		// 	"sound": "",					//告警声音路径（""代表没有声音）
+		// 	"movie": ""						//告警动画路径（""代表没有动画）
+		// },
 		{
 			"id": 20,
 			"led_id": 0,
 			"name": "Oil pressure low",
 			"precondition": 0,
+			"pop_up":0,
 			"priority": 0,
 			"cancel": 0,
 			"blink": 0,
@@ -26,6 +43,7 @@
 			"led_id": 0,
 			"name": "Engine temperature high",
 			"precondition": 0,
+			"pop_up":0,
 			"priority": 0,
 			"cancel": 0,
 			"blink": 0,
@@ -40,7 +58,8 @@
 			"id": 95,
 			"led_id": 0,
 			"name": "Cooling system fault",
-			"precondition": 0,
+			"precondition": 3,
+			"pop_up":0,
 			"priority": 0,
 			"cancel": 0,
 			"blink": 0,
@@ -56,6 +75,7 @@
 			"led_id": 0,
 			"name": "Charge system fault",
 			"precondition": 0,
+			"pop_up":0,
 			"priority": 0,
 			"cancel": 0,
 			"blink": 0,
@@ -71,6 +91,7 @@
 			"led_id": 0,
 			"name": "Increased emissions",
 			"precondition": 0,
+			"pop_up":0,
 			"priority": 0,
 			"cancel": 0,
 			"blink": 0,
@@ -86,6 +107,7 @@
 			"led_id": 0,
 			"name": "Please check engine,drive carefully ",
 			"precondition": 0,
+			"pop_up":0,
 			"priority": 0,
 			"cancel": 0,
 			"blink": 0,
@@ -101,6 +123,7 @@
 			"led_id": 0,
 			"name": "Please check engine,drive carefully ",
 			"precondition": 0,
+			"pop_up":0,
 			"priority": 0,
 			"cancel": 0,
 			"blink": 0,
@@ -116,6 +139,7 @@
 			"led_id": 0,
 			"name": "Please check fuel pump ",
 			"precondition": 0,
+			"pop_up":0,
 			"priority": 0,
 			"cancel": 0,
 			"blink": 0,
@@ -131,6 +155,7 @@
 			"led_id": 0,
 			"name": "Please check oil pressure,drive carefully",
 			"precondition": 0,
+			"pop_up":0,
 			"priority": 0,
 			"cancel": 0,
 			"blink": 0,
@@ -146,6 +171,7 @@
 			"led_id": 0,
 			"name": "Please check engine fan,drive carefully",
 			"precondition": 0,
+			"pop_up":0,
 			"priority": 0,
 			"cancel": 0,
 			"blink": 0,
@@ -161,6 +187,7 @@
 			"led_id": 0,
 			"name": "Please check clutch,drive carefully",
 			"precondition": 0,
+			"pop_up":0,
 			"priority": 0,
 			"cancel": 0,
 			"blink": 0,
@@ -176,6 +203,7 @@
 			"led_id": 0,
 			"name": "No restart after engine stop,check soon",
 			"precondition": 0,
+			"pop_up":0,
 			"priority": 0,
 			"cancel": 0,
 			"blink": 0,

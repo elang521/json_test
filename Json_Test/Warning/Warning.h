@@ -19,7 +19,8 @@ public:
 	//int resourceY;					//资源Y坐标
 
 	Cancel_Type cancel;					//取消方式
-	int priority;						//优先级
+	Warning_Priority priority;			//优先级
+	bool pop_up;						//是否突出显示
 	bool blink;							//true:闪烁；flase:持续
 	int cycle;							//闪烁周期
     std::string text_cn;				//中文消息

@@ -19,7 +19,7 @@ protected:
 private:
 	void Init();
 	bool Read_Warning_Info();											//读取warningjson配置文件
-	void OnAction(Warning_Action_Type m_Type);				//根据信号的不同，执行不同的操作
+	void OnAction(int m_Id,Warning_Action_Type m_Type);				//根据信号的不同，执行不同的操作
 public:
     static  Warning_Manager * GetInstance();
 };

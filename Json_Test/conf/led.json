@@ -1,10 +1,29 @@
 {
-    "width": 400,
+    "width": 400, //宽度
     "height": 500,
     "leds": [
+        //  {
+        //     "id": 0,                     //每个LED灯对应一个唯一的ID
+        //     "warning_id":0,              //和LED灯关联的告警id，0代表没有关联的告警
+        //     "message_id":1,              //和LED灯关联的消息id，0代表没有关联的消息
+        //     "name": "Turn Left",         //LED灯名
+        //     "precondition": 0,           //LED灯打开的前置条件
+        //     "common": false,             //是否属于公共灯带，true属于，false不属于
+        //     "x": 0,                      //led灯的x坐标
+        //     "y": 0,                      //led灯的y坐标
+        //     "priority": 0,               //led灯亮处理的优先级
+        //     "blink": 0,                  //led灯是否闪烁，true闪烁，flase不闪烁
+        //     "cycle": 0,                  //led灯的闪烁周期
+        //     "text_cn": "",               //中文消息
+        //     "text_en": "",               //英文消息
+        //     "icon": "",                  //led灯图标
+        //     "sound": ""                  //led灯对应的声音
+        // },
+        //一下是跟message关联的LED灯
         {
-            "id": 1,
-            "warning_id": 1,
+            "id": 0,
+            "warning_id": 0, //0代表没有对应的warning
+            "message_id": 1,
             "name": "Turn Left",
             "precondition": 0,
             "common": false,
@@ -19,8 +38,9 @@
             "sound": ""
         },
         {
-            "id": 2,
-            "warning_id": 2,
+            "id": 0,
+            "warning_id": 0,
+            "message_id": 2,
             "name": "Turn Right",
             "precondition": 0,
             "common": false,
@@ -35,8 +55,9 @@
             "sound": ""
         },
         {
-            "id": 3,
+            "id": 0,
             "warning_id": 0,
+            "message_id": 3,
             "name": "Turn Left&Turn Right",
             "precondition": 0,
             "common": false,
@@ -45,15 +66,16 @@
             "priority": 0,
             "blink": 0,
             "cycle": 0,
-            "text_cn": "大灯",
-            "text_en": "High Beam!",
+            "text_cn": "",
+            "text_en": "",
             "icon": "",
             "sound": ""
         },
         {
-            "id": 4,
+            "id": 0,
             "warning_id": 0,
-            "name": "Turn Left&Turn Right",
+            "message_id": 4,
+            "name": "High Beam",
             "precondition": 1,
             "common": false,
             "x": 300,
@@ -61,14 +83,15 @@
             "priority": 0,
             "blink": 0,
             "cycle": 0,
-            "text_cn": "大灯",
-            "text_en": "High Beam!",
+            "text_cn": "",
+            "text_en": "",
             "icon": "",
             "sound": ""
         },
         {
-            "id": 5,
+            "id": 0,
             "warning_id": 0,
+            "message_id": 5,
             "name": "Low Beam",
             "precondition": 1,
             "common": false,
@@ -83,8 +106,9 @@
             "sound": ""
         },
         {
-            "id": 6,
+            "id": 0,
             "warning_id": 0,
+            "message_id": 6,
             "name": "Fog Light",
             "precondition": 0,
             "common": false,
@@ -99,8 +123,9 @@
             "sound": ""
         },
         {
-            "id": 7,
+            "id": 0,
             "warning_id": 0,
+            "message_id": 7,
             "name": "Rear Fog",
             "precondition": 0,
             "common": false,
@@ -115,8 +140,9 @@
             "sound": ""
         },
         {
-            "id": 8,
+            "id": 0,
             "warning_id": 0,
+            "message_id": 8,
             "name": "Position",
             "precondition": 0,
             "common": false,
@@ -130,73 +156,10 @@
             "icon": "",
             "sound": ""
         },
-        {
-            "id": 9,
-            "warning_id": 0,
-            "name": "Automatic headlamps activited",
-            "precondition": 1,
-            "common": false,
-            "x": 0,
-            "y": 0,
-            "priority": 0,
-            "blink": 0,
-            "cycle": 0,
-            "text_cn": "自动大灯开启",
-            "text_en": "Automatic headlamps activated",
-            "icon": "",
-            "sound": ""
-        },
-        {
-            "id": 10,
-            "warning_id": 0,
-            "name": "Automatic headlamps deactivated",
-            "precondition": 1,
-            "common": false,
-            "x": 0,
-            "y": 0,
-            "priority": 0,
-            "blink": 0,
-            "cycle": 0,
-            "text_cn": "自动大灯关闭",
-            "text_en": "Automatic headlamps deactivated",
-            "icon": "",
-            "sound": ""
-        },
-        {
-            "id": 11,
-            "warning_id": 0,
-            "name": "Automatic wiper activated",
-            "precondition": 1,
-            "common": false,
-            "x": 0,
-            "y": 0,
-            "priority": 0,
-            "blink": 0,
-            "cycle": 0,
-            "text_cn": "自动雨刮开启",
-            "text_en": "Automatic wiper activated",
-            "icon": "",
-            "sound": ""
-        },
-        {
-            "id": 12,
-            "warning_id": 0,
-            "name": "Automatic wiper deactivated",
-            "precondition": 1,
-            "common": false,
-            "x": 0,
-            "y": 0,
-            "priority": 0,
-            "blink": 0,
-            "cycle": 0,
-            "text_cn": "自动雨刮关闭",
-            "text_en": "Automatic wiper deactivated",
-            "icon": "",
-            "sound": ""
-        },
         { //胎压监测，有多个选项和文字，
-            "id": 13,
+            "id": 0,
             "warning_id": 0,
+            "message_id": 13,
             "name": "TPMS",
             "precondition": 1,
             "common": false,
@@ -211,8 +174,9 @@
             "sound": ""
         },
         {
-            "id": 14,
+            "id": 0,
             "warning_id": 0,
+            "message_id": 14,
             "name": "EPS",
             "precondition": 1,
             "common": false,
@@ -227,8 +191,9 @@
             "sound": ""
         },
         {
-            "id": 15,
+            "id": 0,
             "warning_id": 0,
+            "message_id": 15,
             "name": "ESC",
             "precondition": 1,
             "common": false,
@@ -243,8 +208,9 @@
             "sound": ""
         },
         {
-            "id": 16,
+            "id": 0,
             "warning_id": 0,
+            "message_id": 16,
             "name": "ESC OFF",
             "precondition": 1,
             "common": false,
@@ -259,8 +225,9 @@
             "sound": ""
         },
         {
-            "id": 17,
+            "id": 0,
             "warning_id": 0,
+            "message_id": 17,
             "name": "HDC",
             "precondition": 1,
             "common": false,
@@ -275,8 +242,9 @@
             "sound": ""
         },
         {
-            "id": 18,
+            "id": 0,
             "warning_id": 0,
+            "message_id": 18,
             "name": "FCW Green",
             "precondition": 1,
             "common": false,
@@ -291,8 +259,9 @@
             "sound": ""
         },
         {
-            "id": 19,
+            "id": 0,
             "warning_id": 0,
+            "message_id": 19,
             "name": "FCW Wait Clear",
             "precondition": 1,
             "common": false,
@@ -307,8 +276,9 @@
             "sound": ""
         },
         {
-            "id": 20,
+            "id": 0,
             "warning_id": 0,
+            "message_id": 20,
             "name": "FCW Yellow",
             "precondition": 1,
             "common": false,
@@ -323,8 +293,9 @@
             "sound": ""
         },
         {
-            "id": 21,
+            "id": 0,
             "warning_id": 0,
+            "message_id": 21,
             "name": "FCW Pay attention",
             "precondition": 1,
             "common": false,
@@ -339,8 +310,9 @@
             "sound": ""
         },
         {
-            "id": 22,
+            "id": 0,
             "warning_id": 0,
+            "message_id": 22,
             "name": "FCW system fault",
             "precondition": 1,
             "common": false,
@@ -355,8 +327,9 @@
             "sound": ""
         },
         {
-            "id": 23,
+            "id": 0,
             "warning_id": 0,
+            "message_id": 23,
             "name": "EBA Green",
             "precondition": 1,
             "common": false,
@@ -371,8 +344,9 @@
             "sound": ""
         },
         {
-            "id": 24,
+            "id": 0,
             "warning_id": 0,
+            "message_id": 24,
             "name": "EBA Wait Clear",
             "precondition": 1,
             "common": false,
@@ -387,8 +361,9 @@
             "sound": ""
         },
         {
-            "id": 25,
+            "id": 0,
             "warning_id": 0,
+            "message_id": 25,
             "name": "EBA Yellow",
             "precondition": 1,
             "common": false,
@@ -403,8 +378,9 @@
             "sound": ""
         },
         {
-            "id": 26,
+            "id": 0,
             "warning_id": 0,
+            "message_id": 26,
             "name": "EBA Read Blink",
             "precondition": 1,
             "common": false,
@@ -419,8 +395,9 @@
             "sound": ""
         },
         {
-            "id": 27,
+            "id": 0,
             "warning_id": 0,
+            "message_id": 27,
             "name": "EBA System Fault",
             "precondition": 1,
             "common": false,
@@ -435,8 +412,9 @@
             "sound": ""
         },
         {
-            "id": 28,
+            "id": 0,
             "warning_id": 0,
+            "message_id": 28,
             "name": "LDWS - Status",
             "precondition": 1,
             "common": false,
@@ -451,8 +429,9 @@
             "sound": ""
         },
         {
-            "id": 29,
+            "id": 0,
             "warning_id": 0,
+            "message_id": 29,
             "name": "LDWS - System status",
             "precondition": 1,
             "common": false,
@@ -467,8 +446,9 @@
             "sound": ""
         },
         {
-            "id":30,
+            "id": 0,
             "warning_id": 0,
+            "message_id": 30,
             "name": "LDWS - left lane departure",
             "precondition": 1,
             "common": false,
@@ -483,8 +463,9 @@
             "sound": ""
         },
         {
-            "id":31,
+            "id": 31,
             "warning_id": 0,
+            "message_id": 1,
             "name": "LDWS - right lane departure",
             "precondition": 1,
             "common": false,
@@ -499,184 +480,9 @@
             "sound": ""
         },
         {
-            "id":32,
+            "id": 0,
             "warning_id": 0,
-            "name": "Engine Hood Open",
-            "precondition": 0,
-            "common": false,
-            "x": 0,
-            "y": 0,
-            "priority": 0,
-            "blink": 0,
-            "cycle": 0,
-            "text_cn": "请注意车道",
-            "text_en": "Please pay attention to the driveway",
-            "icon": "",
-            "sound": ""
-        },
-        {
-            "id":33,
-            "warning_id": 0,
-            "name": "Front Left Door Open",
-            "precondition": 0,
-            "common": false,
-            "x": 0,
-            "y": 0,
-            "priority": 0,
-            "blink": 0,
-            "cycle": 0,
-            "text_cn": "",
-            "text_en": "",
-            "icon": "",
-            "sound": ""
-        },
-        {
-            "id":34,
-            "warning_id": 0,
-            "name": "Front Right Door Open",
-            "precondition": 0,
-            "common": false,
-            "x": 0,
-            "y": 0,
-            "priority": 0,
-            "blink": 0,
-            "cycle": 0,
-            "text_cn": "",
-            "text_en": "",
-            "icon": "",
-            "sound": ""
-        },
-        {
-            "id":35,
-            "warning_id": 0,
-            "name": "Rear Left Door Open",
-            "precondition": 0,
-            "common": false,
-            "x": 0,
-            "y": 0,
-            "priority": 0,
-            "blink": 0,
-            "cycle": 0,
-            "text_cn": "",
-            "text_en": "",
-            "icon": "",
-            "sound": ""
-        },
-        {
-            "id":36,
-            "warning_id": 0,
-            "name": "Rear Right Door Open",
-            "precondition": 0,
-            "common": false,
-            "x": 0,
-            "y": 0,
-            "priority": 0,
-            "blink": 0,
-            "cycle": 0,
-            "text_cn": "",
-            "text_en": "",
-            "icon": "",
-            "sound": ""
-        },
-        {
-            "id":37,
-            "warning_id": 0,
-            "name": "Trunk Door Open",
-            "precondition": 0,
-            "common": false,
-            "x": 0,
-            "y": 0,
-            "priority": 0,
-            "blink": 0,
-            "cycle": 0,
-            "text_cn": "",
-            "text_en": "",
-            "icon": "",
-            "sound": ""
-        },
-        {
-            "id":38,
-            "warning_id": 0,
-            "name": "Seat Memory Request",
-            "precondition": 1,
-            "common": false,
-            "x": 0,
-            "y": 0,
-            "priority": 0,
-            "blink": 0,
-            "cycle": 0,
-            "text_cn": "请在 5 秒内按 1 或 2 按键储存当前座椅位置",
-            "text_en": "Please press 1 or 2 button in 5s to store current seat position",
-            "icon": "",
-            "sound": ""
-        },
-        {
-            "id":39,
-            "warning_id": 0,
-            "name": "Seat Memory stored",
-            "precondition": 1,
-            "common": false,
-            "x": 0,
-            "y": 0,
-            "priority": 0,
-            "blink": 0,
-            "cycle": 0,
-            "text_cn": "座椅位置储存成功",
-            "text_en": "Seat position store successful",
-            "icon": "",
-            "sound": ""
-        },
-        {
-            "id":40,
-            "warning_id": 0,
-            "name": "VehicleState",
-            "precondition": 1,
-            "common": false,
-            "x": 0,
-            "y": 0,
-            "priority": 0,
-            "blink": 0,
-            "cycle": 0,
-            "text_cn": "请停车操作电动尾门",
-            "text_en": "·",
-            "icon": "",
-            "sound": ""
-        },
-        {
-            "id":41,
-            "warning_id": 0,
-            "name": "ShiftState",
-            "precondition": 1,
-            "common": false,
-            "x": 0,
-            "y": 0,
-            "priority": 0,
-            "blink": 0,
-            "cycle": 0,
-            "text_cn": "请置入P或N档以操作电动尾门",
-            "text_en": "Gear P or N to operate tailgate",
-            "icon": "",
-            "sound": ""
-        },
-        {
-            "id":42,
-            "warning_id": 0,
-            "name": "CentrolLockState",
-            "precondition": 1,
-            "common": false,
-            "x": 0,
-            "y": 0,
-            "priority": 0,
-            "blink": 0,
-            "cycle": 0,
-            "text_cn": "Operate tailgate at vehicle unlock",
-            "text_en": "请解锁后操作电动尾门",
-            "icon": "",
-            "sound": ""
-        },
-        {
-            "id":43,
-            "warning_id": 0,
+            "message_id": 43,
             "name": "Autohold",
             "precondition": 1,
             "common": false,
@@ -691,8 +497,9 @@
             "sound": ""
         },
         {
-            "id":44,
+            "id": 0,
             "warning_id": 0,
+            "message_id": 44,
             "name": "ESC_DSC",
             "precondition": 1,
             "common": false,
@@ -707,8 +514,9 @@
             "sound": ""
         },
         {
-            "id":45,
+            "id": 0,
             "warning_id": 0,
+            "message_id": 45,
             "name": "Cruise Control Init",
             "precondition": 1,
             "common": false,
@@ -723,8 +531,9 @@
             "sound": ""
         },
         {
-            "id":46,
+            "id": 0,
             "warning_id": 0,
+            "message_id": 46,
             "name": "Cruise Control Green",
             "precondition": 1,
             "common": false,
@@ -739,8 +548,9 @@
             "sound": ""
         },
         {
-            "id":47,
+            "id": 0,
             "warning_id": 0,
+            "message_id": 47,
             "name": "Cruise Control White",
             "precondition": 1,
             "common": false,
@@ -754,10 +564,12 @@
             "icon": "",
             "sound": ""
         },
+        /***********一下是和告警关联的LED灯*********/
         {
-            "id":48,
-            "warning_id": 0,
-            "name": "Service ",
+            "id": 0,
+            "warning_id": 20,
+            "message_id": 0,
+            "name": "Oil pressure low",
             "precondition": 1,
             "common": false,
             "x": 0,
@@ -765,15 +577,16 @@
             "priority": 0,
             "blink": 0,
             "cycle": 0,
-            "text_cn": "距下次保养距离:xxxx km",
-            "text_en": "Next Service in:xxxx km",
+            "text_cn": "",
+            "text_en": "",
             "icon": "",
             "sound": ""
         },
         {
-            "id":49,
-            "warning_id": 0,
-            "name": "WLC Foreign matter",
+            "id": 0,
+            "warning_id": 21,
+            "message_id": 0,
+            "name": "Engine temperature high",
             "precondition": 1,
             "common": false,
             "x": 0,
@@ -781,15 +594,16 @@
             "priority": 0,
             "blink": 0,
             "cycle": 0,
-            "text_cn": "充电区域有异物",
-            "text_en": "Foreign matter on charging field",
+            "text_cn": "",
+            "text_en": "",
             "icon": "",
             "sound": ""
         },
         {
-            "id":50,
-            "warning_id": 0,
-            "name": "WLC Charging is started",
+            "id": 0,
+            "warning_id": 95,
+            "message_id": 0,
+            "name": "Cooling system fault",
             "precondition": 1,
             "common": false,
             "x": 0,
@@ -797,15 +611,16 @@
             "priority": 0,
             "blink": 0,
             "cycle": 0,
-            "text_cn": "充电开始",
-            "text_en": "Charging is started",
+            "text_cn": "",
+            "text_en": "",
             "icon": "",
             "sound": ""
         },
         {
-            "id":51,
-            "warning_id": 0,
-            "name": "WLC Power is Full",
+            "id": 0,
+            "warning_id": 97,
+            "message_id": 0,
+            "name": "Charge system fault",
             "precondition": 1,
             "common": false,
             "x": 0,
@@ -813,15 +628,16 @@
             "priority": 0,
             "blink": 0,
             "cycle": 0,
-            "text_cn": "充电完成",
-            "text_en": "Power is full",
+            "text_cn": "",
+            "text_en": "",
             "icon": "",
             "sound": ""
         },
         {
-            "id":52,
-            "warning_id": 0,
-            "name": "WLC Charging is stoped",
+            "id": 0,
+            "warning_id": 98,
+            "message_id": 0,
+            "name": "Increased emissions",
             "precondition": 1,
             "common": false,
             "x": 0,
@@ -829,8 +645,110 @@
             "priority": 0,
             "blink": 0,
             "cycle": 0,
-            "text_cn": "充电中断",
-            "text_en": "Charging is stoppe  d",
+            "text_cn": "",
+            "text_en": "",
+            "icon": "",
+            "sound": ""
+        },
+        {
+            "id": 0,
+            "warning_id": 111,
+            "message_id": 0,
+            "name": "Please check engine,drive carefully",
+            "precondition": 1,
+            "common": false,
+            "x": 0,
+            "y": 0,
+            "priority": 0,
+            "blink": 0,
+            "cycle": 0,
+            "text_cn": "",
+            "text_en": "",
+            "icon": "",
+            "sound": ""
+        },
+        {
+            "id": 0,
+            "warning_id": 113,
+            "message_id": 0,
+            "name": "Please check fuel pump",
+            "precondition": 1,
+            "common": false,
+            "x": 0,
+            "y": 0,
+            "priority": 0,
+            "blink": 0,
+            "cycle": 0,
+            "text_cn": "",
+            "text_en": "",
+            "icon": "",
+            "sound": ""
+        },
+         {
+            "id": 0,
+            "warning_id": 114,
+            "message_id": 0,
+            "name": "Please check oil pressure,drive carefully",
+            "precondition": 1,
+            "common": false,
+            "x": 0,
+            "y": 0,
+            "priority": 0,
+            "blink": 0,
+            "cycle": 0,
+            "text_cn": "",
+            "text_en": "",
+            "icon": "",
+            "sound": ""
+        },
+        {
+            "id": 0,
+            "warning_id": 115,
+            "message_id": 0,
+            "name": "Please check engine fan,drive carefully",
+            "precondition": 1,
+            "common": false,
+            "x": 0,
+            "y": 0,
+            "priority": 0,
+            "blink": 0,
+            "cycle": 0,
+            "text_cn": "",
+            "text_en": "",
+            "icon": "",
+            "sound": ""
+        },
+        {
+            "id": 0,
+            "warning_id": 116,
+            "message_id": 0,
+            "name": "Please check clutch,drive carefully",
+            "precondition": 1,
+            "common": false,
+            "x": 0,
+            "y": 0,
+            "priority": 0,
+            "blink": 0,
+            "cycle": 0,
+            "text_cn": "",
+            "text_en": "",
+            "icon": "",
+            "sound": ""
+        },
+        {
+            "id": 0,
+            "warning_id": 117,
+            "message_id": 0,
+            "name": "No restart after engine stop,check soon",
+            "precondition": 1,
+            "common": false,
+            "x": 0,
+            "y": 0,
+            "priority": 0,
+            "blink": 0,
+            "cycle": 0,
+            "text_cn": "",
+            "text_en": "",
             "icon": "",
             "sound": ""
         }

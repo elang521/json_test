@@ -58,7 +58,7 @@ bool Message_Manager::Read_Message_Info()
         m_info.id = leds[i]["id"].asInt();
         m_info.led_Id = leds[i]["led_Id"].asInt();
         m_info.name = leds[i]["name"].asString();
-        m_info.priority = leds[i]["priority"].asInt();
+        m_info.priority = (Message_Priority)leds[i]["priority"].asInt();
         m_info.text_cn = leds[i]["text_cn"].asString();
         m_info.text_en = leds[i]["text_en"].asString();
         m_info.icon = leds[i]["icon"].asString();
@@ -68,7 +68,7 @@ bool Message_Manager::Read_Message_Info()
     return false;
 }
 
-void Message_Manager::OnAction(Message_Action_Type m_Type)
+void Message_Manager::OnAction(int m_Id,Message_Action_Type m_Type)
 {
     //判断来的是什么信号
     switch (m_Type)

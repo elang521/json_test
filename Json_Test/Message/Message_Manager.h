@@ -24,7 +24,7 @@ private:
 private:
     void Init();
     bool Read_Message_Info();											//读取warningjson配置文件
-    void OnAction(Message_Action_Type m_Type);				//根据信号的不同，执行不同的操作
+    void OnAction(int m_Id,Message_Action_Type m_Type);				//根据信号的不同，执行不同的操作
 
 };
 
