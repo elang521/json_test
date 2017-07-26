@@ -10,8 +10,8 @@ public:
 	int id;
 	int led_id;							//对应led的id
 	std::string name;					//名称
-		//int x;							//横坐标
-		//int y;							//纵坐标
+	//int x;							//横坐标
+	//int y;							//纵坐标
 	//int width;						//宽度
 	//int height;						//高度
 	//std::string resolution;			//分辨率
