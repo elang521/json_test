@@ -53,20 +53,15 @@ bool Led_Manager::Read_Led_Info()
 	{
 		Led m_info;
 		m_info.id = leds[i]["id"].asInt();
-		m_info.warning_id = leds[i]["warning_id"].asInt();
-		m_info.message_id = leds[i]["message_id"].asInt();
 		m_info.name = leds[i]["name"].asString();
-		m_info.precondition = (Precondition)leds[i]["precondition"].asInt();
 		m_info.common = leds[i]["common"].asBool();
 		m_info.x = leds[i]["x"].asInt();
 		m_info.y = leds[i]["y"].asInt();
-		m_info.priority = (Led_Priority)leds[i]["priority"].asInt();
 		m_info.blink = leds[i]["blink"].asBool();
 		m_info.cycle = leds[i]["cycle"].asInt();
         m_info.text_cn = leds[i]["text_cn"].asString();
         m_info.text_en = leds[i]["text_en"].asString();
 		m_info.icon = leds[i]["icon"].asString();
-		m_info.sound = leds[i]["sound"].asString();
 		m_leds.push_back(m_info);
 	}
 	return false;
