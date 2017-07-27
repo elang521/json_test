@@ -60,12 +60,9 @@ bool Warning_Manager::Read_Warning_Info()
 		m_info.id = leds[i]["id"].asInt();
 		m_info.led_id = leds[i]["led_id"].asInt();
 		m_info.name = leds[i]["name"].asString();
+		m_info.pop_up = leds[i]["pop_up"].asBool();
 		m_info.priority = (Warning_Priority)leds[i]["priority"].asInt();
-		m_info.blink = leds[i]["blink"].asBool();
-		m_info.cycle = leds[i]["cycle"].asInt();
-        m_info.text_cn = leds[i]["text_cn"].asString();
-        m_info.text_en = leds[i]["text_en"].asString();
-		m_info.icon = leds[i]["icon"].asString();
+		m_info.precondition = (Precondition)leds[i]["precondition"].asInt();
 		m_info.sound = leds[i]["sound"].asString();
 		this->m_Warnings.push_back(m_info);
 	}

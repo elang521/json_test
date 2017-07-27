@@ -5,15 +5,12 @@ Warning::Warning()
     this->id=0;
     this->led_id=0;
     this->name=""; 
-    this->icon=""; 
     this->sound=""; 
-    this->movie="";
+    this->pop_up=false; 
     this->cancel=Cancel_Type::general;
     this->priority=Warning_Priority::Warning_Priority1;
-    this->blink=false;
-    this->cycle=0;
-    this->text_cn = "";
-    this->text_en = "";
+    this->precondition=Precondition::always;
+
 }
 
 Warning::~Warning()

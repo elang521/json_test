@@ -14,6 +14,7 @@
     <ProjectGuid>{A92E1231-851F-419E-BD7D-D940F006DA39}</ProjectGuid>
     <Keyword>Win32Proj</Keyword>
     <RootNamespace>Json_Test</RootNamespace>
+    <ProjectName>Json_Middle</ProjectName>
   </PropertyGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.Default.props" />
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'" Label="Configuration">

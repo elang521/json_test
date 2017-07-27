@@ -57,11 +57,10 @@ bool Message_Manager::Read_Message_Info()
         Message m_info;
         m_info.id = leds[i]["id"].asInt();
         m_info.led_Id = leds[i]["led_Id"].asInt();
+        m_info.cancel = (Cancel_Type)leds[i]["cancel"].asInt();
+        m_info.precondition = (Precondition)leds[i]["precondition"].asInt();
         m_info.name = leds[i]["name"].asString();
         m_info.priority = (Message_Priority)leds[i]["priority"].asInt();
-        m_info.text_cn = leds[i]["text_cn"].asString();
-        m_info.text_en = leds[i]["text_en"].asString();
-        m_info.icon = leds[i]["icon"].asString();
         m_info.sound = leds[i]["sound"].asString();
         m_Messages.push_back(m_info);
     }
