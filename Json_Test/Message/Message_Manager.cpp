@@ -1,7 +1,7 @@
 #include "Message_Manager.h"
 #include <mutex>
 
-Message_Manager* Message_Manager::m_Manager = NULL;\
+Message_Manager *Message_Manager::m_Manager = NULL;
 
 Message_Manager *Message_Manager::Get_Instance()
 {
@@ -15,8 +15,6 @@ Message_Manager *Message_Manager::Get_Instance()
     return m_Manager;
 }
 
-
-
 Message_Manager::Message_Manager()
 {
 
@@ -25,7 +23,6 @@ Message_Manager::Message_Manager()
 
 Message_Manager::~Message_Manager()
 {
-
 }
 
 void Message_Manager::Init()
@@ -34,7 +31,6 @@ void Message_Manager::Init()
     if (this->Read_Message_Info())
     {
     }
-    
 }
 
 bool Message_Manager::Read_Message_Info()
@@ -48,8 +44,10 @@ bool Message_Manager::Read_Message_Info()
     {
         return false;
     }
-    int width = root["width"].asInt();
-    int height = root["width"].asInt();
+    this->x = root["x"].asInt();
+    this->y = root["y"].asInt();
+    this->width = root["width"].asInt();
+    this->height = root["height"].asInt();
     const Json::Value messages = root["Messages"];
     int count = messages.size();
     for (unsigned int i = 0; i < messages.size(); ++i)
@@ -57,9 +55,9 @@ bool Message_Manager::Read_Message_Info()
         Message m_info;
         m_info.id = messages[i]["id"].asInt();
         m_info.name = messages[i]["name"].asString();
-		m_info.cancel = (Cancel_Type)messages[i]["cancel"].asInt();
-        m_info.blink=messages[i]["blink"].asBool();
-        m_info.cycle=messages[i]["cycle"].asInt();
+        m_info.cancel = (Cancel_Type)messages[i]["cancel"].asInt();
+        m_info.blink = messages[i]["blink"].asBool();
+        m_info.cycle = messages[i]["cycle"].asInt();
         m_info.text_cn = messages[i]["text_cn"].asString();
         m_info.text_en = messages[i]["text_en"].asString();
         m_info.icon = messages[i]["icon"].asString();
@@ -69,7 +67,7 @@ bool Message_Manager::Read_Message_Info()
     return false;
 }
 
-void Message_Manager::OnAction(int m_Id,Message_Action_Type m_Type)
+void Message_Manager::OnAction(int m_Id, Message_Action_Type m_Type)
 {
     //判断来的是什么信号
     switch (m_Type)
@@ -90,4 +88,3 @@ void Message_Manager::OnAction(int m_Id,Message_Action_Type m_Type)
         //case:cl15off
     }
 }
-

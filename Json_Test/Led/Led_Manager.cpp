@@ -45,8 +45,8 @@ bool Led_Manager::Read_Led_Info()
 	{
 		return false;	
 	}
-	int width = root["width"].asInt();
-	int height = root["width"].asInt();
+	this->width = root["width"].asInt();
+	this->height = root["height"].asInt();
 	const Json::Value leds = root["leds"];
 	int count = leds.size();
 	for (unsigned int i = 0; i < leds.size(); ++i)

@@ -42,8 +42,10 @@ bool Warning_Manager::Read_Warning_Info()
 	{
 		return false;
 	}
-	//int width = root["width"].asInt();
-	//int height = root["width"].asInt();
+	this->x = root["x"].asInt();
+    this->y = root["y"].asInt();
+    this->width = root["width"].asInt();
+    this->height = root["height"].asInt();
 	const Json::Value warnings = root["warnings"];
 	unsigned int count = warnings.size();
 	if (count == 0)

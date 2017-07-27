@@ -18,6 +18,9 @@ public:
     static  Led_Manager * Get_Instance();
 
 private:
+    //LED灯的全局配置
+    int width=0;
+    int height=0；
 	std::vector<Led> m_leds;					//存在的led等信息列表
 	std::list<Led> m_open_leds;				    //存放已经打开的led灯
 protected:
