@@ -2,15 +2,17 @@
 
 Warning::Warning()
 {
-    this->id=0;
-    this->led_id=0;
+    this->id=0;    
     this->name=""; 
+    this->icon=""; 
+    this->pop_up=false;
     this->sound=""; 
-    this->pop_up=false; 
+    this->movie="";
     this->cancel=Cancel_Type::general;
-    this->priority=Warning_Priority::Warning_Priority1;
-    this->precondition=Precondition::always;
-
+    this->blink=false;
+    this->cycle=0;
+    this->text_cn = "";
+    this->text_en = "";
 }
 
 Warning::~Warning()
