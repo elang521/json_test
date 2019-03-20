@@ -6,6 +6,7 @@
 #include "Warning.h"
 #include "../json/json.h"
 
+
 class Warning_Manager
 {
 public:
