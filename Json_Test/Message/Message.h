@@ -8,10 +8,8 @@ class Message
 {
 public:
     int id;
-    int led_Id;						//告警led的id
     std::string name;			    //名称
-    int cancel;						//取消方式
-    Message_Priority priority;		//优先级
+    Cancel_Type cancel;				//取消方式
     bool blink;					    //true:闪烁；flase:持续
     int cycle;					    //闪烁周期(单位毫秒)
     std::string text_cn;			//中文消息
